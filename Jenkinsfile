@@ -4,39 +4,23 @@ final PIPELINE_ENV = 'PIPELINE_ENV'
 
 final DEFAULT_PIPELINE_ENV = 'pull_request'
 
-final PIPELINE_ENVS = 'pull_request,qa,dev,stg,prod'
+final PIPELINE_ENVS = 'pull_request'
 
 def PIPELINE_PARAMETERS = '''
 DESIRED_NODE_NAME = 'docker'
-DOCKER_IMAGE = 'node-automation-allure'
 GIT_CREDENTIALS_ID = 'github'
 PIPELINE_VERSION = 'master'
 PROJECT_NAME = 'juan-test'
+PLATFORM = 'node'
 HTML_REPORT {
     DIR = 'allure-report'
     FILE = 'index.html'
     NAME = 'HTML Report'
 }
+DOCKER_IMAGE = 'node-automation-allure'
 environments {
     pull_request {
-        MONITOR_ENV = 'stgx'
-        ENVS = 'stgx'
-    }
-    qa {
-        ENVS = 'qax'
-        MONITOR_ENV = 'qax'
-    }
-    dev {
-        ENVS = 'devx'
-        MONITOR_ENV = 'devx'
-    }
-    stg {
-        ENVS = 'stgx'
-        MONITOR_ENV = 'stgx'
-    }
-    prod {
         ENVS = 'prod'
-        MONITOR_ENV = 'prod'
     }
 }
 '''
