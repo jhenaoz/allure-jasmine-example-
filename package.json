@@ -6,7 +6,8 @@
   "scripts": {
     "allure-generate": "allure generate",
     "start": "node app.js",
-    "test": "node spec/support/runner.js && npm run allure-generate"
+    "test": "node spec/support/runner.js && npm run allure-generate",
+    "ci:test": "node spec/support/runner.js && npm run allure-generate",
   },
   "author": "",
   "license": "ISC",
