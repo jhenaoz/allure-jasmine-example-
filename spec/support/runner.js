@@ -6,7 +6,7 @@ jasmine.loadConfigFile('./spec/support/jasmine.json');
 
 
 jasmine.addReporter(new AllureReporter({
-  resultsDir: 'allure-results'
+  resultsDir: 'allure-results-second'
 }));
 jasmine.configureDefaultReporter({
     showColors: true
